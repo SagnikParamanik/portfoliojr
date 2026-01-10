@@ -144,7 +144,7 @@ const Projects = () => {
                       text-white shadow-lg`}
                     >
                       <ExternalLink className="w-5 h-5" />
-                      <span className="text-sm">Demo</span>
+                      <span className="text-sm">Live</span>
                     </motion.a>
                   </div>
                 </div>

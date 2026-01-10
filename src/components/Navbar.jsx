@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import ThemeToggle from "./ThemeToggle";
+//import ThemeToggle from "./ThemeToggle";
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = ({ theme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -92,13 +92,13 @@ const Navbar = ({ theme, toggleTheme }) => {
           })}
 
           <div className="ml-2">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            {/* <ThemeToggle theme={theme} toggleTheme={toggleTheme} /> */}
           </div>
         </div>
 
         {/* Mobile */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          {/* <ThemeToggle theme={theme} toggleTheme={toggleTheme} /> */}
 
           <motion.button
             onClick={() => setIsOpen(!isOpen)}

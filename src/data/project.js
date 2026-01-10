@@ -30,20 +30,19 @@ export const projectsData = [
     type: "Educational Project",
     icon: Orbit, // ✅ ADDED
   },
+  // {
+  //   id: 3,
+  //   title: "Mini Weather Monitoring System (Arduino)",
+  //   description:
+  //     "A compact system designed to monitor environmental conditions such as temperature and humidity using sensors, with data displayed locally or sent to cloud services for analysis.",
+  //   technologies: ["Arduino", "Sensors", "Java"],
+  
+  //   gradient: "from-sky-500 to-blue-600",
+  //   type: "Hardware + Software Project",
+  //   icon: CloudSun, // ✅ ADDED
+  // },
   {
     id: 3,
-    title: "Mini Weather Monitoring System (Arduino)",
-    description:
-      "A compact system designed to monitor environmental conditions such as temperature and humidity using sensors, with data displayed locally or sent to cloud services for analysis.",
-    technologies: ["Arduino", "Sensors", "Java"],
-    github: "https://github.com/yourusername/weather-monitoring-arduino",
-    live: "#",
-    gradient: "from-sky-500 to-blue-600",
-    type: "Hardware + Software Project",
-    icon: CloudSun, // ✅ ADDED
-  },
-  {
-    id: 4,
     title: "Salary Prediction App",
     description:
       "A machine learning application that predicts salary based on years of experience using Simple Linear Regression with real-time visualization.",
