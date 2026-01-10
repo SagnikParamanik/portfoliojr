@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Star, GitFork, Clock } from "lucide-react";
 import { projectsData } from "../data/project";
 
 const Projects = () => {
@@ -19,13 +19,13 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A selection of projects that showcase my skills and passion for development
+            Real-world projects built, maintained, and version-controlled on GitHub
           </p>
         </motion.div>
 
@@ -40,36 +40,75 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <div className="relative h-full bg-gradient-to-br from-white to-gray-50
-              dark:from-gray-900 dark:to-black rounded-2xl overflow-hidden
-              border border-gray-200 dark:border-white/10
-              hover:border-indigo-500/50 transition-all duration-300 shadow-lg">
-
+              <div
+                className="relative h-full bg-linear-to-r from-white to-gray-50
+                dark:from-gray-900 dark:to-black rounded-2xl overflow-hidden
+                border border-gray-200 dark:border-white/10
+                hover:border-indigo-500/50 transition-all duration-300 shadow-lg"
+              >
                 {/* Hover Gradient */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient}
+                  className={`absolute inset-0 bg-linear-to-r ${project.gradient}
                   opacity-0 hover:opacity-10 transition-opacity duration-300`}
                 />
 
                 <div className="relative z-10 p-6 flex flex-col h-full">
-                  <div className="mb-4">
+
+                  {/* Header with Icon */}
+                  <div className="mb-4 flex items-start gap-4">
                     <div
-                      className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.gradient} mb-4`}
-                    />
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                      {project.title}
-                    </h3>
+                      className={`w-12 h-12 rounded-lg bg-linear-to-br ${project.gradient}
+                      flex items-center justify-center`}
+                    >
+                      {project.icon && (
+                        <project.icon className="w-6 h-6 text-white" />
+                      )}
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                        {project.title}
+                      </h3>
+
+                      {project.type && (
+                        <span className="text-xs text-gray-500 dark:text-gray-400">
+                          {project.type}
+                        </span>
+                      )}
+                    </div>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow leading-relaxed">
+                  {/* Description */}
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 grow leading-relaxed">
                     {project.description}
                   </p>
 
+                  {/* GitHub Meta */}
+                  <div className="flex flex-wrap gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4">
+                    {project.stars !== undefined && (
+                      <span className="flex items-center gap-1">
+                        <Star className="w-4 h-4" /> {project.stars}
+                      </span>
+                    )}
+                    {project.forks !== undefined && (
+                      <span className="flex items-center gap-1">
+                        <GitFork className="w-4 h-4" /> {project.forks}
+                      </span>
+                    )}
+                    {project.updated && (
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" /> {project.updated}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
                         className="px-3 py-1 rounded-full text-xs font-medium
+                        text-gray-900 dark:text-gray-200
                         bg-white/80 dark:bg-black/50
                         border border-gray-200 dark:border-white/10"
                       >
@@ -78,6 +117,7 @@ const Projects = () => {
                     ))}
                   </div>
 
+                  {/* Actions */}
                   <div className="flex gap-4">
                     <motion.a
                       href={project.github}
@@ -100,7 +140,7 @@ const Projects = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className={`flex-1 flex items-center justify-center gap-2
-                      px-4 py-3 rounded-xl bg-gradient-to-r ${project.gradient}
+                      px-4 py-3 rounded-xl bg-linear-to-r ${project.gradient}
                       text-white shadow-lg`}
                     >
                       <ExternalLink className="w-5 h-5" />
@@ -108,7 +148,6 @@ const Projects = () => {
                     </motion.a>
                   </div>
                 </div>
-
               </div>
             </motion.div>
           ))}

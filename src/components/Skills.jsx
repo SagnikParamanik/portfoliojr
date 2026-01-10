@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { skillsData } from "../data/skills";
 
-
 const Skills = () => {
   if (!skillsData || skillsData.length === 0) {
     return null;
@@ -14,6 +13,7 @@ const Skills = () => {
       dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,8 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Technologies and tools I work with to bring ideas to life
+            Technologies, tools, and frameworks I actively use to build scalable,
+            modern, and performance-focused applications.
           </p>
         </motion.div>
 
@@ -46,16 +47,15 @@ const Skills = () => {
             >
               <div
                 className="relative h-full bg-white/50 dark:bg-white/5
-              backdrop-blur-lg rounded-2xl p-6 border border-gray-200
-              dark:border-white/10 hover:border-indigo-500/50
-              transition-all duration-300 overflow-hidden"
+                backdrop-blur-lg rounded-2xl p-6 border border-gray-200
+                dark:border-white/10 hover:border-indigo-500/50
+                transition-all duration-300 overflow-hidden"
               >
                 {/* Gradient overlay */}
                 <div
                   className={`absolute inset-0 bg-linear-to-br ${
                     skill.color || ""
-                  }
-                  opacity-0 hover:opacity-10 transition-opacity duration-300`}
+                  } opacity-0 hover:opacity-10 transition-opacity duration-300`}
                 />
 
                 {/* Icon */}
@@ -72,11 +72,37 @@ const Skills = () => {
                 )}
 
                 {/* Category */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 relative z-10">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 relative z-10">
                   {skill.category}
                 </h3>
 
-                {/* Skill Tags */}
+                {/* Short Description */}
+                {skill.description && (
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 relative z-10">
+                    {skill.description}
+                  </p>
+                )}
+
+                {/* Meta Info */}
+                <div className="flex flex-wrap gap-3 text-xs text-gray-700 dark:text-gray-300 mb-4 relative z-10">
+                  {skill.level && (
+                    <span className="px-2 py-1 rounded-md border border-gray-300 dark:border-white/10">
+                      Level: {skill.level}
+                    </span>
+                  )}
+                  {skill.experience && (
+                    <span className="px-2 py-1 rounded-md border border-gray-300 dark:border-white/10">
+                      {skill.experience}
+                    </span>
+                  )}
+                  {skill.skills && (
+                    <span className="px-2 py-1 rounded-md border border-gray-300 dark:border-white/10">
+                      {skill.skills.length}+ Tools
+                    </span>
+                  )}
+                </div>
+
+                {/* Skill Tags (FIXED TEXT VISIBILITY) */}
                 <div className="flex flex-wrap gap-2 relative z-10">
                   {skill.skills?.map((item, idx) => (
                     <motion.span
@@ -89,8 +115,10 @@ const Skills = () => {
                         delay: index * 0.1 + idx * 0.05,
                       }}
                       className="px-3 py-1.5 rounded-full text-sm font-medium
-                      bg-white/80 dark:bg-black/50 border border-gray-200
-                      dark:border-white/10 hover:border-indigo-500/50
+                      text-gray-900 dark:text-gray-200
+                      bg-white/80 dark:bg-black/50
+                      border border-gray-200 dark:border-white/10
+                      hover:border-indigo-500/50
                       transition-all duration-300"
                     >
                       {item}
