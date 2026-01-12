@@ -12,8 +12,8 @@ export const projectsData = [
     description:
       "Designed and developed a personal portfolio website to showcase projects, skills, and experience with smooth animations and responsive design.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yourusername/portfolio-website",
-    live: "https://your-portfolio.vercel.app",
+    github: "https://github.com/SagnikParamanik/portfoliojr",
+    live: "https://portfoliojr-tau.vercel.app/",
     gradient: "from-indigo-500 to-purple-500",
     type: "Personal Project",
     icon: Globe, // ✅ ADDED
@@ -30,20 +30,21 @@ export const projectsData = [
     type: "Educational Project",
     icon: Orbit, // ✅ ADDED
   },
-  // {
-  //   id: 3,
-  //   title: "Mini Weather Monitoring System (Arduino)",
-  //   description:
-  //     "A compact system designed to monitor environmental conditions such as temperature and humidity using sensors, with data displayed locally or sent to cloud services for analysis.",
-  //   technologies: ["Arduino", "Sensors", "Java"],
-  
-  //   gradient: "from-sky-500 to-blue-600",
-  //   type: "Hardware + Software Project",
-  //   icon: CloudSun, // ✅ ADDED
-  // },
+   {
+     id: 3,
+     title: "Enterprise Hiring & Recruitment Platform",
+     description:
+      "PlaceCandidate is a modern hiring platform UI built with React and Tailwind CSS, featuring a clean SaaS design and smooth animations",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"], 
+      github: "https://github.com/SagnikParamanik/-Hiring-Platform",
+      live: "https://hiring-platform-steel.vercel.app/",
+     gradient: "from-sky-500 to-blue-600",
+     type: " Educational Project",
+     icon: CloudSun, // ✅ ADDED
+   },
   {
-    id: 3,
-    title: "Salary Prediction App",
+    id: 4,
+    title: "Salary Prediction",
     description:
       "A machine learning application that predicts salary based on years of experience using Simple Linear Regression with real-time visualization.",
     technologies: ["Python", "Machine Learning", "Streamlit"],
