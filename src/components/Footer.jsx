@@ -21,7 +21,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-gray-600 dark:text-gray-400 text-sm flex items-center gap-2"
           >
-            <span>© {currentYear} Your Name. Made with</span>
+            <span>© {currentYear} Sagnik Paramanik. Made with</span>
             <motion.span
               animate={{
                 scale: [1, 1.2, 1],

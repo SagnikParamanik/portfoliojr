@@ -3,6 +3,8 @@ import {
   Orbit,
   CloudSun,
   LineChart,
+  Grape,
+  FolderCheck,
 } from "lucide-react";
 
 export const projectsData = [
@@ -68,5 +70,17 @@ export const projectsData = [
       "Career planning",
       "Recruitment forecasting",
     ],
+  },
+  {
+    id: 5,
+    title: "Smart folder organizer & cleaner",
+    description:
+      "A modern folder-cleaning utility that organizes files automatically with a clean UI, preview mode, and dark/light theme support.",
+    technologies: ["React.js", "Node.js", "Express.js", "JavaScript", "HTML5", "CSS3", "Git", "GitHub"],
+    github: "https://github.com/SagnikParamanik/Smart-Folder-Cleaner",
+    live: "",
+    gradient: "from-indigo-500 to-purple-500",
+    type: "Personal Project",
+    icon: FolderCheck, // ✅ ADDED
   },
 ];
