@@ -22,15 +22,16 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Solar System Explorer",
+    title: "Job portal",
     description:
-      "An interactive Solar System Explorer featuring planet data visualization, orbital simulations, and a user-friendly interface for educational engagement.",
-    technologies: ["HTML", "CSS Animations", "JavaScript"],
-    github: "https://github.com/yourusername/solar-system-explorer",
-    live: "https://solar-system-explorer.vercel.app",
+      "An interactive Job portal featuring job listings, application tracking, and a user-friendly interface for job seekers and employers.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "Supabase", "Context API",
+                  "REST-based auth", "Responsive UI", "Git", "GitHub"],
+    github: "https://github.com/SagnikParamanik/job-portal-development",
+    live: "https://job-portal-development-eta.vercel.app/",
     gradient: "from-purple-500 to-pink-500",
     type: "Educational Project",
-    icon: Orbit, // ✅ ADDED
+    icon: FolderCheck, // ✅ ADDED
   },
    {
      id: 3,
@@ -46,33 +47,6 @@ export const projectsData = [
    },
   {
     id: 4,
-    title: "Salary Prediction",
-    description:
-      "A machine learning application that predicts salary based on years of experience using Simple Linear Regression with real-time visualization.",
-    technologies: ["Python", "Machine Learning", "Streamlit"],
-    github: "https://github.com/yourusername/salary-prediction-app",
-    live: "https://salary-prediction.streamlit.app",
-    gradient: "from-emerald-500 to-teal-600",
-    type: "Machine Learning Project",
-    icon: LineChart, // ✅ ADDED
-
-    methodology: [
-      "Simple Linear Regression model fitting",
-      "Residual analysis to evaluate accuracy and detect outliers",
-    ],
-    features: [
-      "Interactive experience slider",
-      "Real-time salary prediction",
-      "Graphical regression line visualization",
-    ],
-    applications: [
-      "HR analytics",
-      "Career planning",
-      "Recruitment forecasting",
-    ],
-  },
-  {
-    id: 5,
     title: "Smart folder organizer & cleaner",
     description:
       "A modern folder-cleaning utility that organizes files automatically with a clean UI, preview mode, and dark/light theme support.",
