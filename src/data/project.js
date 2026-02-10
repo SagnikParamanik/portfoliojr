@@ -5,6 +5,7 @@ import {
   LineChart,
   Grape,
   FolderCheck,
+  ShoppingBagIcon,
 } from "lucide-react";
 
 export const projectsData = [
@@ -16,7 +17,7 @@ export const projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/SagnikParamanik/portfoliojr",
     live: "https://portfoliojr-tau.vercel.app/",
-    gradient: "from-indigo-500 to-purple-500",
+    gradient: "from-blue-500 to-green-500",
     type: "Personal Project",
     icon: Globe, // ✅ ADDED
   },
@@ -42,19 +43,31 @@ export const projectsData = [
       github: "https://github.com/SagnikParamanik/-Hiring-Platform",
       live: "https://hiring-platform-steel.vercel.app/",
      gradient: "from-sky-500 to-blue-600",
-     type: " Educational Project",
-     icon: CloudSun, // ✅ ADDED
+     type: "Personal Project",
+     icon: Orbit, // ✅ ADDED
    },
   {
     id: 4,
-    title: "Smart folder organizer & cleaner",
+    title: "Mini E-commerce Web Application",
     description:
-      "A modern folder-cleaning utility that organizes files automatically with a clean UI, preview mode, and dark/light theme support.",
-    technologies: ["React.js", "Node.js", "Express.js", "JavaScript", "HTML5", "CSS3", "Git", "GitHub"],
-    github: "https://github.com/SagnikParamanik/Smart-Folder-Cleaner",
-    live: "",
-    gradient: "from-indigo-500 to-purple-500",
+      "Mini E-commerce web application built with React (Vite) and Tailwind CSS, featuring product listings, category filtering, search functionality, and a responsive modern UI. Deployed on Vercel to demonstrate real-world frontend development and deployment skills.",
+    technologies: ["React.js (Vite)", "JavaScript", "Tailwind CSS", "HTML & CSS", "Git & GitHub", "Vercel (Deployment)"],
+    github: "https://github.com/SagnikParamanik/e-Commerce",
+    live: "https://mini-e-commerce-tan.vercel.app/",
+    gradient: "from-yellow-400 to-red-500",
     type: "Personal Project",
-    icon: FolderCheck, // ✅ ADDED
+    icon: ShoppingBagIcon, // ✅ ADDED
+  },
+   {
+    id: 5,
+    title: "Therapy Web UI Clone",
+    description:
+      "A therapy web UI clone built with React.js, Node.js, Express.js, and Tailwind CSS, featuring a responsive design and smooth animations to replicate the user experience of a popular therapy platform.",
+    technologies: ["React.js", "Node.js", "Express.js", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/SagnikParamanik/Clone-and-Redesign",
+    live: "https://clone-and-redesign.vercel.app/",
+    gradient: "from-green-400 to-blue-500",
+    type: "Educational Project",
+    icon: LineChart, // ✅ ADDED
   },
 ];

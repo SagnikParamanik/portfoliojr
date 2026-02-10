@@ -6,9 +6,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-white dark:bg-black relative overflow-hidden"
+      className="py-16 sm:py-20 bg-white dark:bg-black relative overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
         <motion.div
@@ -16,21 +16,21 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
-          <div className="w-20 h-1 bg-linear-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Real-world projects built, maintained, and version-controlled on GitHub
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
@@ -39,6 +39,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
+              className="h-full"
             >
               <div
                 className="relative h-full bg-linear-to-r from-white to-gray-50
@@ -52,21 +53,21 @@ const Projects = () => {
                   opacity-0 hover:opacity-10 transition-opacity duration-300`}
                 />
 
-                <div className="relative z-10 p-6 flex flex-col h-full">
+                <div className="relative z-10 p-5 sm:p-6 flex flex-col h-full">
 
-                  {/* Header with Icon */}
-                  <div className="mb-4 flex items-start gap-4">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                     <div
-                      className={`w-12 h-12 rounded-lg bg-linear-to-br ${project.gradient}
+                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-linear-to-br ${project.gradient}
                       flex items-center justify-center`}
                     >
                       {project.icon && (
-                        <project.icon className="w-6 h-6 text-white" />
+                        <project.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       )}
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
                         {project.title}
                       </h3>
 
@@ -79,12 +80,12 @@ const Projects = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 grow leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 grow leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* GitHub Meta */}
-                  <div className="flex flex-wrap gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4">
+                  <div className="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-400 mb-4">
                     {project.stars !== undefined && (
                       <span className="flex items-center gap-1">
                         <Star className="w-4 h-4" /> {project.stars}
@@ -118,7 +119,7 @@ const Projects = () => {
                   </div>
 
                   {/* Actions */}
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                     <motion.a
                       href={project.github}
                       target="_blank"
@@ -147,6 +148,7 @@ const Projects = () => {
                       <span className="text-sm">Live</span>
                     </motion.a>
                   </div>
+
                 </div>
               </div>
             </motion.div>

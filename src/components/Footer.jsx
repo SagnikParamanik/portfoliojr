@@ -58,9 +58,6 @@ const Footer = () => {
           transition={{ delay: 0.2 }}
           className="mt-4 pt-4 border-t border-gray-200 dark:border-white/10 text-center"
         >
-          <p className="text-xs text-gray-500 dark:text-gray-500">
-            Built with React, Tailwind CSS, and Framer Motion
-          </p>
         </motion.div>
       </div>
     </footer>

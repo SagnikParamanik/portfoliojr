@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-//import ThemeToggle from "./ThemeToggle";
 
 const Navbar = ({ theme }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +35,12 @@ const Navbar = ({ theme }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  /* 🔒 Lock body scroll when menu open (mobile UX fix) */
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
+  }, [isOpen]);
+
   const handleClick = (e, href) => {
     e.preventDefault();
     const el = document.querySelector(href);
@@ -58,14 +63,13 @@ const Navbar = ({ theme }) => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <motion.a
           href="#home"
           onClick={(e) => handleClick(e, "#home")}
           whileHover={{ scale: 1.05 }}
-          className="text-2xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-xl sm:text-2xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
         >
           Portfolio
         </motion.a>
@@ -90,18 +94,12 @@ const Navbar = ({ theme }) => {
               </motion.a>
             );
           })}
-
-          <div className="ml-2">
-            {/* <ThemeToggle theme={theme} toggleTheme={toggleTheme} /> */}
-          </div>
         </div>
 
         {/* Mobile */}
-        <div className="md:hidden flex items-center gap-3">
-          {/* <ThemeToggle theme={theme} toggleTheme={toggleTheme} /> */}
-
+        <div className="md:hidden flex items-center">
           <motion.button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen((p) => !p)}
             whileTap={{ scale: 0.9 }}
             className="p-2 rounded-xl backdrop-blur-xl bg-white/30 dark:bg-white/10 border border-white/20"
           >
@@ -123,7 +121,7 @@ const Navbar = ({ theme }) => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden backdrop-blur-2xl bg-white/80 dark:bg-black/70 border-t border-white/20 dark:border-white/10"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-6 space-y-3">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
                 return (
