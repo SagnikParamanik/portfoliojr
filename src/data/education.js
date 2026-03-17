@@ -7,11 +7,11 @@
     institution: "B.P. Poddar Institute of Management and Technology",
     location: "Kolkata, West Bengal",
     duration: "September 2022 – June 2026",
-    cgpa: "CGPA: 6.34 (up to 6th Semester)",
+    cgpa: "CGPA: 6.61 (up to 7th Semester)",
     description:
       "Currently pursuing Bachelor of Technology in Electronics and Communication Engineering with a strong foundation in core electronics, communication systems, and problem-solving skills.",
     achievements: [
-      "Completed coursework up to 6th semester",
+      "Completed coursework up to 7th semester",
       "Hands-on experience with academic projects",
       "Active participation in technical learning and self-development"
     ],

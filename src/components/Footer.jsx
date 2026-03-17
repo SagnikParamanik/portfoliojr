@@ -34,7 +34,7 @@ const Footer = () => {
             >
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </motion.span>
-            <span>and React</span>
+            <span></span>
           </motion.p>
 
           <motion.button

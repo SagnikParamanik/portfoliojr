@@ -145,7 +145,7 @@ const Hero = () => {
             border border-indigo-500/30"
           >
             <img
-              src="/saraswati pujo.jpeg"
+              src="/mypic.jpeg"
               alt="Sagnik Profile"
               className="w-full h-full object-cover"
             />
