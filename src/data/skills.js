@@ -38,12 +38,27 @@ export const skillsData = [
       "HTML",
       "CSS",
       "React.js",
-      "Node.js",
+      "Next.js",
       "Responsive Web Design",
     ],
   },
   {
     id: 3,
+    category: "Backend Technologies",
+    description:
+      "Building scalable and efficient server-side applications.",
+    level: "Intermediate",
+    experience: "1.5+ Years",
+    color: "from-purple-500 to-pink-500",
+    icon: Cpu,
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST API Development",
+    ],
+  },
+  {
+    id: 4,
     category: "Database",
     description:
       "Working with relational databases and writing optimized SQL queries.",
@@ -52,11 +67,11 @@ export const skillsData = [
     color: "from-emerald-500 to-teal-500",
     icon: Database,
     skills: [
-      "SQL",
+      "SQL"," MongoDB"
     ],
   },
   {
-    id: 4,
+    id: 5,
     category: "Version Control System",
     description:
       "Managing source code efficiently with version control and collaboration tools.",
@@ -70,7 +85,7 @@ export const skillsData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     category: "Soft Skills",
     description:
       "Professional skills that help deliver quality projects and collaborate effectively.",
