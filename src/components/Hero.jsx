@@ -1,10 +1,11 @@
+
 import { motion } from "framer-motion";
 import { Download, Sparkles } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 /* ------------------ Typing Effect ------------------ */
 const roles = [
-  "Frontend Developer",
+  "MERN Stack Developer",
   "UI-Focused Engineer",
   "React Developer",
   "Web Animation Enthusiast",
@@ -79,7 +80,7 @@ const Hero = () => {
             >
               <Sparkles className="w-4 h-4 text-indigo-500" />
               <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
-                Frontend Developer • UI Focused
+                MERN Stack Developer • UI Focused
               </span>
             </motion.div>
           </motion.div>
@@ -121,7 +122,7 @@ const Hero = () => {
             </motion.button>
 
             <motion.a
-              href="/SagnikParmanik__Resume.pdf"
+              href="/Resume_og.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -145,7 +146,7 @@ const Hero = () => {
             border border-indigo-500/30"
           >
             <img
-              src="/mypic.jpeg"
+              src="/durga puja 2026.PNG"
               alt="Sagnik Profile"
               className="w-full h-full object-cover"
             />

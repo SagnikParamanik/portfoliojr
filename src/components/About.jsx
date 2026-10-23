@@ -61,7 +61,7 @@ const About = () => {
           >
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               I am an <span className="font-semibold text-indigo-600 dark:text-indigo-400">
-              intermediate web developer</span> with strong skills in both front-end and
+              intermediate MERN Stack developer</span> with strong skills in both front-end and
               back-end technologies. I enjoy building modern, responsive, and user-friendly
               web applications that focus on clean UI and real-world usability.
             </p>
