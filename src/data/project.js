@@ -4,7 +4,7 @@ import {
   CloudSun,
   LineChart,
   Grape,
-  FolderCheck,
+  BrainCircuit,
   ShoppingBagIcon,
 } from "lucide-react";
 
@@ -23,6 +23,27 @@ export const projectsData = [
   },
   {
     id: 2,
+    title: "InterviewIQ",
+    description:
+      "An AI-powered mock interview platform that helps candidates prepare for real-world interviews through resume-based question generation, voice-based interviews, and detailed performance analysis.",
+    technologies: [ "React",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Firebase Authentication",
+    "JWT",
+    "REST API",
+    "Tailwind CSS"],
+    github: "https://github.com/SagnikParamanik/interviewIQ",
+    live: "https://interviewiq-client-szqr.onrender.com/",
+    gradient: "from-purple-500 to-pink-500",
+    type: "Personal Project",
+    icon: BrainCircuit, // ✅ ADDED
+  },
+  {
+    id: 3,
     title: "Job portal",
     description:
       "An interactive Job portal featuring job listings, application tracking, and a user-friendly interface for job seekers and employers.",
@@ -31,21 +52,10 @@ export const projectsData = [
     github: "https://github.com/SagnikParamanik/job-portal-development",
     live: "https://job-portal-development-eta.vercel.app/",
     gradient: "from-purple-500 to-pink-500",
-    type: "Educational Project",
-    icon: FolderCheck, // ✅ ADDED
+    type: "Personal Project",
+    icon: BrainCircuit, // ✅ ADDED
   },
-   {
-     id: 3,
-     title: "Enterprise Hiring & Recruitment Platform",
-     description:
-      "PlaceCandidate is a modern hiring platform UI built with React and Tailwind CSS, featuring a clean SaaS design and smooth animations",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"], 
-      github: "https://github.com/SagnikParamanik/-Hiring-Platform",
-      live: "https://hiring-platform-steel.vercel.app/",
-     gradient: "from-sky-500 to-blue-600",
-     type: "Personal Project",
-     icon: Orbit, // ✅ ADDED
-   },
+   
   {
     id: 4,
     title: "Mini E-commerce Web Application",
@@ -55,7 +65,7 @@ export const projectsData = [
     github: "https://github.com/SagnikParamanik/e-Commerce",
     live: "https://mini-e-commerce-tan.vercel.app/",
     gradient: "from-yellow-400 to-red-500",
-    type: "Personal Project",
+    type: "Client Project",
     icon: ShoppingBagIcon, // ✅ ADDED
   },
    {
@@ -67,7 +77,7 @@ export const projectsData = [
     github: "https://github.com/SagnikParamanik/Clone-and-Redesign",
     live: "https://clone-and-redesign.vercel.app/",
     gradient: "from-green-400 to-blue-500",
-    type: "Educational Project",
+    type: "Client Project",
     icon: LineChart, // ✅ ADDED
   },
 ];
