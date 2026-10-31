@@ -1,10 +1,8 @@
 import {
   Globe,
-  Orbit,
-  CloudSun,
   LineChart,
-  Grape,
-  BrainCircuit,
+ MessagesSquare,
+ BriefcaseBusiness,
   ShoppingBagIcon,
 } from "lucide-react";
 
@@ -40,7 +38,7 @@ export const projectsData = [
     live: "https://interviewiq-client-szqr.onrender.com/",
     gradient: "from-purple-500 to-pink-500",
     type: "Personal Project",
-    icon: BrainCircuit, // ✅ ADDED
+    icon: MessagesSquare, // ✅ ADDED
   },
   {
     id: 3,
@@ -53,7 +51,7 @@ export const projectsData = [
     live: "https://job-portal-development-eta.vercel.app/",
     gradient: "from-purple-500 to-pink-500",
     type: "Personal Project",
-    icon: BrainCircuit, // ✅ ADDED
+    icon: BriefcaseBusiness, // ✅ ADDED
   },
    
   {
