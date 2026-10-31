@@ -36,7 +36,7 @@ export const projectsData = [
     "Tailwind CSS"],
     github: "https://github.com/SagnikParamanik/interviewIQ",
     live: "https://interviewiq-client-szqr.onrender.com/",
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-rose-400 via-fuchsia-500 to-indigo-500",
     type: "Personal Project",
     icon: MessagesSquare, // ✅ ADDED
   },
@@ -49,7 +49,7 @@ export const projectsData = [
                   "REST-based auth", "Responsive UI", "Git", "GitHub"],
     github: "https://github.com/SagnikParamanik/job-portal-development",
     live: "https://job-portal-development-eta.vercel.app/",
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-slate-400 to-Deep slate-500",
     type: "Personal Project",
     icon: BriefcaseBusiness, // ✅ ADDED
   },
